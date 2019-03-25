@@ -17,7 +17,7 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    this.x = this.x+(this.speed*dt);
+    this.x = this.x+(this.speed*50*dt);
     if(this.x>505){
       this.toStart();
     }
@@ -29,8 +29,8 @@ Enemy.prototype.render = function() {
 };
 Enemy.prototype.toStart = function(){
     // reset row and set back ennemy to the left of drawing area
-    this.y = 83 * Math.floor((Math.random() * 3) + 1);
-    this.x = -1*Math.floor((Math.random() * 100) + 1);
+    this.y = 83 * Math.floor((Math.random() * 3) + 1)-20;
+    this.x = -1*Math.floor((Math.random() * 300) + 1);
 }
 // Now write your own player class
 // This class requires an update(), render() and
@@ -48,12 +48,13 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 Player.prototype.toStart = function(){
-    this.y = 498;
+    this.y = 387;
     this.x = 101 * Math.floor((Math.random() * 5) + 1);
+    this.update();
 }
 Player.prototype.handleInput = function(key) {
     if(key === 'left'){
-      if(this.x >= 0){
+      if(this.x > 0){
       this.x = this.x-101;
       this.update();
       }
@@ -61,22 +62,22 @@ Player.prototype.handleInput = function(key) {
     else if(key === 'up'){
       if(this.y > 83){
       this.y = this.y-83;
-      this.update;
+      this.update();
       }
       else{
-        //game done
+        this.toStart();
       }
     }
     else if(key==='right'){
-      if(this.x <= 505){
+      if(this.x < 404){
       this.x = this.x+101;
-      this.update;
+      this.update();
       }
     }
     else if(key==='down'){
-      if(this.y < 415){
+      if(this.y < 360){
       this.y = this.y+83;
-      this.update;
+      this.update();
       }
     }
 }

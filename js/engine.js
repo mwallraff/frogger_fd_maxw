@@ -92,6 +92,13 @@ var Engine = (function(global) {
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
+            if(enemy.x>0 && (enemy.x-player.x)<50 && (enemy.x-player.x)>-50){
+              if((enemy.y-player.y)<20 && (enemy.y-player.y)>-20){
+                player.toStart();
+              }
+            }
+            
+
         });
         player.update();
     }
