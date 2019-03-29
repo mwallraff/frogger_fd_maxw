@@ -20,7 +20,7 @@ Meant to be compliant with:
 http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
 
 ## Built With
-ES5 object oriented javascript
+ES5 object oriented javascript\
 Graphics provided by udacity
 
 ## Contributing
