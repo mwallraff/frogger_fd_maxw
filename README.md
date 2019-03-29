@@ -1,4 +1,5 @@
 # Classic Arcade Game Clone Project - Project for Udacity Frontend Nano Degree
+
 This small browser game is an online version of the classic arcade game frogger.
 Developing this game has been an educational project in the Udacity frontend developer nano degree.
 
