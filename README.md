@@ -1,20 +1,37 @@
-# Classic Arcade Game Clone Project
+# Classic Arcade Game Clone Project - Project for Udacity Frontend Nano Degree
+This small browser game is an online version of the classic arcade game frogger.
+Developing this game has been an educational project in the Udacity frontend developer nano degree.
 
-## Table of Contents
+## Prerequisites
+This game is meant to run in a web browser. It makes use of standard ES5 functionality. Some special functions such as "requestAnimationFrame" is not supported by Internet Explorer versions 9 and below as well as very old versions of modern browsers (Chrome, Edge, Firefox, Safari).
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+## Rules of the Game
+The player's boy character must cross a stretch of ugly pavement to reach beach and water. The pavement is a bugs' trail and the boy must avoid them. If hit by a bug the boy is set back to his starting point and loses one life. The game ends with a 'game over' if all three lives are lost. If however the boy manages to reach the water 13 times without losing all of his lives the game is won.
 
-## Instructions
+## Coding, reusability, maintainability
+The code is split into three files: app.js, engine.js and resources.js
+*app.js* provides the classes, objects, properties and methods (including rendering) for the player's character, the enemies and some performance indicators.
+*engine.js* provides the canvas rendering loop, checks for collisions and takes care of starting and ending the game
+*resources.js* holds image loading functionality including preloading and basic caching
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+## Code Style
+Meant to be compliant with:
+http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
-
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Built With
+ES5 object oriented javascript
+Graphics provided by udacity
 
 ## Contributing
+This is a one-off only self-learn project for the Udacity Frontend nano-degree. Contributions will not be supported.
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+## Versioning
+This is the version submitted in a first attempt to meet the project's requirements. There might be some minor revisions.
+However the game will not be revised, actively improved, supported or maintained in the future.
+
+## Authors
+Max W
+Project base and graphics by Udacity Team Andrew, hbkwong https://github.com/udacity/frontend-nanodegree-arcade-game
+
+## Acknowledgments
+clickable button on canvas by https://stackoverflow.com/questions/24384368/simple-button-in-html5-canvas by A1rPun

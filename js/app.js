@@ -131,7 +131,7 @@ Heart.prototype.render = function() {
 var player = new Player();
 
 var allEnemies = [];
-let i = 0;
+var i = 0;
 for (i = 0; i < 4; i++) {
   allEnemies[i] = new Enemy(Math.floor((Math.random() * 3) + 1));
 }
