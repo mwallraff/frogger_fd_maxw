@@ -9,10 +9,10 @@ This game is meant to run in a web browser. It makes use of standard ES5 functio
 The player's boy character must cross a stretch of ugly pavement to reach beach and water. The pavement is a bugs' trail and the boy must avoid them. If hit by a bug the boy is set back to his starting point and loses one life. The game ends with a 'game over' if all three lives are lost. If however the boy manages to reach the water 13 times without losing all of his lives the game is won.
 
 ## Coding, reusability, maintainability
-The code is split into three files: app.js, engine.js and resources.js
-*app.js* provides the classes, objects, properties and methods (including rendering) for the player's character, the enemies and some performance indicators.
-*engine.js* provides the canvas rendering loop, checks for collisions and takes care of starting and ending the game
-*resources.js* holds image loading functionality including preloading and basic caching
+The code is split into three files: app.js, engine.js and resources.js:
+**app.js** provides the classes, objects, properties and methods (including rendering) for the player's character, the enemies and some performance indicators.
+**engine.js** provides the canvas rendering loop, checks for collisions and takes care of starting and ending the game
+**resources.js** holds image loading functionality including preloading and basic caching
 
 ## Code Style
 Meant to be compliant with:
